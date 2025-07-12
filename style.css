@@ -13,57 +13,6 @@
   font-family: Arial, sans-serif;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes scrollDownArr {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    top: 90%;
-  }
-}
-
-@keyframes movingBorder {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
-}
-
-@keyframes l15 {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-@keyframes gradientImg {
-  0% {
-    background-position: 40% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 40% 50%;
-  }
-}
-
 @keyframes gradient {
   0% {
     background-position: 20% 50%;
