@@ -97,7 +97,7 @@ section h1 {
   padding: 10px;
 }
 
-/* ACCORDIAN */
+/* ABOUT US CONTENT */
 section .container {
   display: flex;
   flex-direction: column;
@@ -105,71 +105,6 @@ section .container {
 }
 section .container p {
   margin-bottom: 10px;
-}
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.accordion-item {
-  box-shadow: 0px 0px 4px #e4d00a;
-  border-radius: 10px;
-}
-
-.accordion-button {
-  background-color: var(--bg);
-  color: var(--accent);
-  padding: 1rem;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-button:hover {
-  background-color: #212228;
-}
-
-.accordion-button[expanded="true"] {
-  border-bottom: 1px solid #e4d00a;
-}
-
-.accordion-button::after {
-  content: "+";
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.accordion-button[expanded="true"]::after {
-  content: "−";
-  transform: rotate(180deg);
-}
-
-.accordion-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0px 10px 0 10px;
-  background-color: #292c35;
-}
-
-.accordion-panel ul {
-  list-style-type: style;
-  padding-left: 20px;
-  line-height: 1.3;
-}
-
-.accordion-panel.open {
-  padding: 1rem;
 }
 
 /* FOOTER */
