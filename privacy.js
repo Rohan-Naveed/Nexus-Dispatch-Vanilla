@@ -1,4 +1,6 @@
 const accordions = document.querySelectorAll(".accordion-button");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-nav");
 
 accordions.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -8,5 +10,18 @@ accordions.forEach((btn) => {
     btn.setAttribute("expanded", !isOpen);
     panel.classList.toggle("open");
     panel.style.maxHeight = !isOpen ? panel.scrollHeight + "px" : null;
+  });
+});
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  //   hamburger.classList.toggle("active");
+});
+
+// Close menu when a nav link is clicked
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
   });
 });
