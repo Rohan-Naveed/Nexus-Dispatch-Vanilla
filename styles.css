@@ -468,7 +468,7 @@ section .container.about-content p {
 }
 
 .aligner {
-  height: 100%;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -555,7 +555,6 @@ section .container.privacy-content p {
   padding: 1rem;
 }
 
-/* Media Queries (Consolidated) */
 /* Extra small (phones) */
 @media (max-width: 480px) {
   /* Shared Styles */
@@ -634,19 +633,29 @@ section .container.privacy-content p {
   .hamburger {
     display: block;
   }
+  .hamburger img {
+    height: 20px;
+    width: 20px;
+    color: #e4d00a;
+  }
   .navbar-nav {
-    display: none;
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background-color: #292c35;
-    padding: 15px;
+    padding: 0 15px;
     border-top: 2px solid #e4d00a;
+    transition: max-height 0.5s linear;
+    z-index: 100;
   }
   .navbar-nav.active {
-    display: flex;
+    max-height: 400px;
+    padding: 15px;
   }
   .nav-item {
     margin: 10px 0;
@@ -669,6 +678,41 @@ section .container.privacy-content p {
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
+  /* NAVBAR */
+  .hamburger {
+    display: block;
+  }
+  .hamburger img {
+    height: 20px;
+    width: 20px;
+    color: #e4d00a;
+  }
+  .navbar-nav {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #292c35;
+    padding: 0 15px;
+    border-top: 2px solid #e4d00a;
+    transition: max-height 0.5s linear;
+    z-index: 100;
+  }
+  .navbar-nav.active {
+    max-height: 400px;
+    padding: 15px;
+  }
+  .nav-item {
+    margin: 10px 0;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+
   /* Home Page Styles */
   .banner-content h1 {
     font-size: 36px;
