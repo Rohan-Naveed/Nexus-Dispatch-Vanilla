@@ -25,3 +25,15 @@ accordions.forEach((btn) => {
     panel.style.maxHeight = !isOpen ? panel.scrollHeight + "px" : null;
   });
 });
+
+function navigateToSection(event, sectionId) {
+  event.preventDefault();
+
+  // Change this if your homepage URL is different
+  const homePath = "/";
+
+  if (window.location.pathname !== homePath) {
+    sessionStorage.setItem("scrollTarget", sectionId);
+    window.location.href = homePath + "#" + sectionId;
+  }
+}

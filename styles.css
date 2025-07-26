@@ -546,6 +546,7 @@ section .container.privacy-content p {
 }
 
 .accordion-panel ul {
+  margin-top: 5px;
   list-style-type: disc;
   padding-left: 20px;
   line-height: 1.3;
