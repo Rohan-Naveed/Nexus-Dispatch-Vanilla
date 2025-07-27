@@ -65,7 +65,9 @@
         <!-- Banner Content -->
         <div class="banner-content">
           <h1>Truck Dispatching Services</h1>
-          <button class="banner-button"><p>Try Me</p></button>
+          <button class="banner-button">
+            <a href="#contact-us">Start from today!</a>
+          </button>
         </div>
       </div>
     </div>
@@ -320,35 +322,38 @@
     <!-- Contact Us Form Section -->
     <section class="contact-us" id="contact-us">
       <div class="container">
-        <h1>Contact Us</h1>
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="e.g Martin Smith" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="e.g Martin123@gmail.com"
-            />
-          </div>
-          <div class="form-group form-group-full">
-            <label for="truck-type">Truck Type:</label>
-            <select id="truck-type">
-              <option value="default" selected>
-                -- Select A Truck Type --
-              </option>
-              <option value="truck1">Dry Van</option>
-              <option value="truck2">Reefer</option>
-              <option value="truck3">Flat Bed/Step Deck</option>
-              <option value="truck4">Power Only</option>
-              <option value="truck5">Box Truck</option>
-              <option value="truck6">Hot Shot</option>
-            </select>
-          </div>
-        </form>
+        <div class="contact-container">
+          <h1>Contact Us</h1>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" placeholder="e.g Martin Smith" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="e.g Martin123@gmail.com"
+              />
+            </div>
+            <div class="form-group form-group-full">
+              <label for="truck-type">Truck Type:</label>
+              <select id="truck-type">
+                <option value="default" selected>
+                  -- Select A Truck Type --
+                </option>
+                <option value="truck1">Dry Van</option>
+                <option value="truck2">Reefer</option>
+                <option value="truck3">Flat Bed/Step Deck</option>
+                <option value="truck4">Power Only</option>
+                <option value="truck5">Box Truck</option>
+                <option value="truck6">Hot Shot</option>
+              </select>
+            </div>
+          </form>
+          <button class="contact-button">Submit</button>
+        </div>
       </div>
     </section>
 

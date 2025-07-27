@@ -11,7 +11,7 @@
 body {
   background-color: #292c35;
   color: #e1e0e0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Container */
@@ -116,7 +116,7 @@ body {
 /* Shared Section Styles */
 section h1 {
   color: #e4d00a;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
   margin: 50px 0 30px;
@@ -143,7 +143,7 @@ section h1 {
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .banner-overlay {
@@ -186,13 +186,18 @@ section h1 {
   overflow: hidden;
 }
 
+.banner-button a {
+  text-decoration: none;
+  color: #e4d00a;
+}
+
 .banner-button::before {
   content: "";
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: inherit;
   scale: 0;
   z-index: -1;
@@ -204,7 +209,8 @@ section h1 {
   scale: 4;
 }
 
-.banner-button:hover {
+.banner-button:hover,
+.banner-button:hover a {
   color: #212121;
   scale: 1.1;
   border-radius: 20px;
@@ -234,8 +240,9 @@ section h1 {
   font-size: 45px;
   font-weight: bold;
   text-align: center;
-  margin: 50px 0 10px;
+  margin: 50px 0 0px;
   grid-column: 1/-1;
+  letter-spacing: 2px;
 }
 
 .service-box {
@@ -418,11 +425,21 @@ section h1 {
 }
 
 /* Contact Us */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* align-items: center;
+  justify-items: center; */
   gap: 30px;
-  max-width: 800px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -454,6 +471,53 @@ section h1 {
 .form-group input::placeholder {
   color: #e1e0e0;
   opacity: 0.7;
+}
+
+.contact-button {
+  margin-top: 40px;
+  grid-template-columns: 1/-1;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 48px;
+  font-size: 18px;
+  color: #e4d00a;
+  border: 2px solid #e4d00a;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #e4d00a;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-button:hover::before {
+  scale: 4;
+}
+
+.contact-button:hover,
+.contact-button:hover a {
+  color: #212121;
+  scale: 1.1;
+  border-radius: 20px;
+  box-shadow: 0 0px 20px #e4ce0a62;
+}
+
+.contact-button:active {
+  scale: 1;
 }
 
 /* Styles from aboutUsStyles.css (About Us Page) */
@@ -543,6 +607,7 @@ section .container.privacy-content p {
   transition: max-height 0.3s ease;
   padding: 0px 10px 0 10px;
   background-color: #292c35;
+  border-radius: 10px;
 }
 
 .accordion-panel ul {
@@ -622,6 +687,7 @@ section .container.privacy-content p {
   }
   .contact-form {
     grid-template-columns: 1fr;
+    width: 300px;
   }
   .form-group-full {
     grid-column: span 1;
@@ -738,6 +804,7 @@ section .container.privacy-content p {
   }
   .contact-form {
     grid-template-columns: 1fr;
+    width: 450px;
   }
   .form-group-full {
     grid-column: span 1;
