@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navbar-nav");
 const accordions = document.querySelectorAll(".accordion-button");
+const contactBtn = document.querySelector(".contact-button");
 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
@@ -37,3 +38,23 @@ function navigateToSection(event, sectionId) {
     window.location.href = homePath + "#" + sectionId;
   }
 }
+
+// CONTACT US LOGIC
+emailjs.init("udL4IO2sU-lbu_9Yb");
+
+// Manually trigger form submission
+contactBtn.addEventListener("click", function () {
+  const contactForm = document.querySelector(".contact-form");
+
+  if (!contactForm.reportValidity()) return; // Check if form is valid
+
+  emailjs.sendForm("service_956huoq", "template_8vqf9nf", contactForm).then(
+    () => {
+      alert("✅ Message sent successfully!");
+      contactForm.reset();
+    },
+    (err) => {
+      alert("❌ Failed to send message: " + JSON.stringify(err));
+    }
+  );
+});
