@@ -385,6 +385,11 @@ section h1 {
 .choose-us-card-icon {
   color: #e4d00a;
   font-size: 15px;
+  transition: all 0.3s linear;
+}
+
+.choose-us-card:hover .choose-us-card-icon {
+  transform: scale(1.1);
 }
 
 .brand {
@@ -523,6 +528,26 @@ section h1 {
 
 .contact-button:active {
   scale: 1;
+}
+
+.form-message {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.form-message.success {
+  color: #4caf50;
+  opacity: 1;
+}
+
+.form-message.error {
+  color: #f44336;
+  opacity: 1;
 }
 
 /* Styles from aboutUsStyles.css (About Us Page) */
